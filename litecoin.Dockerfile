@@ -22,11 +22,11 @@ WORKDIR /root/litecoin
 VOLUME /root/.litecoin
 
 # mainnnet
-EXPOSE 22555
-EXPOSE 22556
+EXPOSE 9332
+EXPOSE 9333
 
 # testnet
-EXPOSE 44555
-EXPOSE 44556
+EXPOSE 19332
+EXPOSE 19335
 
 ENTRYPOINT /root/litecoin/bin/litecoind
