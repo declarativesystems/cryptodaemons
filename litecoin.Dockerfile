@@ -6,21 +6,20 @@ ARG LITECOIN_HASH
 
 ARG DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && apt-get install -y curl bzip2
-RUN useradd --create-home litecoin --uid 1000
 
-USER litecoin
+RUN mkdir /root/.litecoin
 
-WORKDIR /home/litecoin
-RUN mkdir /home/litecoin/.litecoin
-
-RUN curl -L "https://download.litecoin.org/litecoin-${LITECOIN_VERSION}/linux/litecoin-${LITECOIN_VERSION}-x86_64-linux-gnu.tar.gz" -O \
+RUN cd /root \
+    && curl -L "https://download.litecoin.org/litecoin-${LITECOIN_VERSION}/linux/litecoin-${LITECOIN_VERSION}-x86_64-linux-gnu.tar.gz" -O \
     && echo "${LITECOIN_HASH} litecoin-${LITECOIN_VERSION}-x86_64-linux-gnu.tar.gz" | sha256sum --check \
     && tar -zxvf "litecoin-${LITECOIN_VERSION}-x86_64-linux-gnu.tar.gz" \
     && rm "litecoin-${LITECOIN_VERSION}-x86_64-linux-gnu.tar.gz"  \
     && ln -s "./litecoin-${LITECOIN_VERSION}" litecoin
 
+WORKDIR /root/litecoin
+
 # blockchain location
-VOLUME /home/litecoin/.litecoin
+VOLUME /root/.litecoin
 
 # mainnnet
 EXPOSE 22555
@@ -30,5 +29,4 @@ EXPOSE 22556
 EXPOSE 44555
 EXPOSE 44556
 
-
-ENTRYPOINT /home/litecoin/litecoin/bin/litecoind
+ENTRYPOINT /root/litecoin/bin/litecoind
