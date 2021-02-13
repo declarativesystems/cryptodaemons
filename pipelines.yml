@@ -4,7 +4,7 @@ resources:
     type: GitRepo
     configuration:
       gitProvider: githubAccountGeoffwilliams
-      path: yolke/yolk-collector
+      path: declarativesystems/cryptodaemons
   - name: containerEnvCryptoDaemons
     type: declarativesystems/ContainerEnv
     configuration:
