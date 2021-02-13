@@ -1,0 +1,38 @@
+apiVersion: v1.1
+resources:
+  - name: gitCryptoDaemons
+    type: GitRepo
+    configuration:
+      gitProvider: githubAccountGeoffwilliams
+      path: yolke/yolk-collector
+  - name: containerEnvCryptoDaemons
+    type: declarativesystems/ContainerEnv
+    configuration:
+      sourceArtifactory: artifactory
+
+pipelines:
+  - name: cryptoDaemons
+    configuration:
+      runtime:
+        type: image
+        image:
+          custom:
+            name: "declarativesystems.jfrog.io/docker-local/pipelines"
+            tag: "0.7.0-27"
+            registry: artifactory
+            sourceRepository: docker-local
+
+    steps:
+      - name: buildAndPushImages
+        type: Bash
+        configuration:
+          inputResources:
+            - name: gitCryptoDaemons
+            - name: containerEnvCryptoDaemons
+          integrations:
+            - name: artifactory
+        execution:
+          onExecute:
+            - cd ${res_gitCryptoDaemons_resourcePath}
+            - make build_images
+            - make push_images
