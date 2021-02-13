@@ -17,7 +17,7 @@ RUN cd /root \
 WORKDIR /root/bitcoin
 
 # blockchain location
-VOLUME /home/bitcoin/.bitcoin
+VOLUME /root/.bitcoin
 
 # mainnnet
 EXPOSE 8333
@@ -28,4 +28,4 @@ EXPOSE 18333
 EXPOSE 18333
 
 
-ENTRYPOINT /home/bitcoin/bitcoin/bin/bitcoind
+ENTRYPOINT /root/bitcoin/bin/bitcoind
