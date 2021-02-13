@@ -31,4 +31,4 @@ EXPOSE 28081
 EXPOSE 38080
 EXPOSE 38081
 
-ENTRYPOINT /root/monero/monerod
+ENTRYPOINT ["/root/monero/monerod"]

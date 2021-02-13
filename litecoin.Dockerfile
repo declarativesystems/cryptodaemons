@@ -29,4 +29,4 @@ EXPOSE 9333
 EXPOSE 19332
 EXPOSE 19335
 
-ENTRYPOINT /root/litecoin/bin/litecoind
+ENTRYPOINT ["/root/litecoin/bin/litecoind"]

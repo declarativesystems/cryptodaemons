@@ -27,4 +27,4 @@ EXPOSE 44555
 EXPOSE 44556
 
 
-ENTRYPOINT /root/dogecoin/bin/dogecoind
+ENTRYPOINT ["/root/dogecoin/bin/dogecoind"]

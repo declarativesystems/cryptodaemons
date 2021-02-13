@@ -28,4 +28,4 @@ EXPOSE 18333
 EXPOSE 18333
 
 
-ENTRYPOINT /root/bitcoin/bin/bitcoind
+ENTRYPOINT ["/root/bitcoin/bin/bitcoind"]
