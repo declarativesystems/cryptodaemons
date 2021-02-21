@@ -14,4 +14,4 @@ RUN cd /root \
 
 WORKDIR /root/xmrig
 
-ENTRYPOINT ["/root/xmrig"]
+ENTRYPOINT ["/root/xmrig/xmrig"]
