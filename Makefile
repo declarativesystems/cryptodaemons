@@ -21,8 +21,12 @@ MONERO_VERSION := 0.17.1.9
 MONERO_HASH := 0fb6f53b7b9b3b205151c652b6c9ca7e735f80bfe78427d1061f042723ee6381
 MONERO_TAG := $(BASE_TAG)_monero:$(MONERO_VERSION)
 
-build_images: bitcoin_image dogecoin_image litecoin_image monero_image
-push_images: bitcoin_push dogecoin_push litecoin_push monero_push
+XMRIG_VERSION := 6.9.0
+XMRIG_HASH := 2d67dd33adeb42ee4aa467d5638b0809b6ab1e0f88180e67bcc97a4fe21aa822
+XMRIG_TAG := $(BASE_TAG)_xmrig:$(XMRIG_VERSION)
+
+build_images: bitcoin_image dogecoin_image litecoin_image monero_image xmrig_image
+push_images: bitcoin_push dogecoin_push litecoin_push monero_push xmrig_push
 
 bitcoin_image:
 	buildah bud \
@@ -67,3 +71,14 @@ monero_image:
 
 monero_push:
 	podman push $(MONERO_TAG)
+
+xmrig_image:
+	buildah bud \
+		--build-arg XMRIG_VERSION=$(XMRIG_VERSION) \
+		--build-arg XMRIG_HASH=$(XMRIG_HASH) \
+		-f xmrig.Dockerfile \
+		--squash \
+		-t $(XMRIG_TAG)
+
+xmrig_push:
+	podman push $(XMRIG_TAG)
