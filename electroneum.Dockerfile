@@ -2,7 +2,7 @@ FROM ubuntu:focal-20210119
 
 ARG ELECTRONEUM_VERSION
 ARG DEBIAN_FRONTEND=noninteractive
-RUN apt-get update && apt-get install -y curl xz-utils
+RUN apt-get update && apt-get install -y curl xz-utils libnorm1
 
 RUN mkdir /root/.bitmonero \
     && mkdir /app
