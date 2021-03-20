@@ -35,8 +35,8 @@ XMRIG_VERSION := 6.9.0
 XMRIG_HASH := 2d67dd33adeb42ee4aa467d5638b0809b6ab1e0f88180e67bcc97a4fe21aa822
 XMRIG_TAG := $(BASE_TAG)_xmrig:$(XMRIG_VERSION)
 
-build_images: bitcoin_image dogecoin_image litecoin_image monero_image raven_image xmrig_image
-push_images: bitcoin_push dogecoin_push litecoin_push monero_push raven_push xmrig_push
+build_images: bitcoin_image dogecoin_image litecoin_image monero_image raven_image wownero_image xmrig_image
+push_images: bitcoin_push dogecoin_push litecoin_push monero_push raven_push wownero_push xmrig_push
 
 bitcoin_image:
 	buildah bud \
