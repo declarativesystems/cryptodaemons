@@ -14,7 +14,7 @@ RUN cd /app \
     && echo "${WOWNERO_HASH} wownero-linux-x64-v${WOWNERO_VERSION}.tar.bz2" | sha256sum --check \
     && tar -xjvf "wownero-linux-x64-v${WOWNERO_VERSION}.tar.bz2" \
     && rm "wownero-linux-x64-v${WOWNERO_VERSION}.tar.bz2"  \
-    && ln -s "./wownero-x86_64-linux-gnu-v${WOWERO_VERSION}" wownero
+    && ln -s wownero* wownero
 
 WORKDIR /app
 
