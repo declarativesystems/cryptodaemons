@@ -11,6 +11,10 @@ BITCOIN_TAG := $(BASE_TAG)_bitcoin:$(BITCOIN_VERSION)
 DOGECOIN_VERSION := 1.14.2
 DOGECOIN_TAG := $(BASE_TAG)_dogecoin:$(DOGECOIN_VERSION)
 
+# https://github.com/electroneum/electroneum/releases
+ELECTRONEUM_VERSION := 3.3.1.0
+ELECTRONEUM_TAG := $(BASE_TAG)_electroneum:$(ELECTRONEUM_VERSION)
+
 # https://github.com/litecoin-project/litecoin/releases
 LITECOIN_VERSION := 0.18.1
 LITECOIN_HASH := ca50936299e2c5a66b954c266dcaaeef9e91b2f5307069b9894048acf3eb5751
@@ -21,10 +25,12 @@ MONERO_VERSION := 0.17.1.9
 MONERO_HASH := 0fb6f53b7b9b3b205151c652b6c9ca7e735f80bfe78427d1061f042723ee6381
 MONERO_TAG := $(BASE_TAG)_monero:$(MONERO_VERSION)
 
+# https://github.com/RavenProject/Ravencoin
 RAVEN_VERSION := 4.3.2.0
 RAVEN_TAG := $(BASE_TAG)_raven:$(RAVEN_VERSION)
 
 # self hosted git doesnt support version munging
+# https://git.wownero.com/wownero/wownero
 WOWNERO_URL := https://git.wownero.com/attachments/ff0be4f5-37b6-4208-aee3-0ca4c8e97c89
 WOWNERO_HASH := 709b905cf853035b1e1660f9de54be44ef4fcfef3924489bff38dc090866ff58
 WOWNERO_VERSION := 0.9.2.2
@@ -35,8 +41,8 @@ XMRIG_VERSION := 6.9.0
 XMRIG_HASH := 2d67dd33adeb42ee4aa467d5638b0809b6ab1e0f88180e67bcc97a4fe21aa822
 XMRIG_TAG := $(BASE_TAG)_xmrig:$(XMRIG_VERSION)
 
-build_images: bitcoin_image dogecoin_image litecoin_image monero_image raven_image wownero_image xmrig_image
-push_images: bitcoin_push dogecoin_push litecoin_push monero_push raven_push wownero_push xmrig_push
+build_images: bitcoin_image dogecoin_image electroneum_image litecoin_image monero_image raven_image wownero_image xmrig_image
+push_images: bitcoin_push dogecoin_push electroneum_push litecoin_push monero_push raven_push wownero_push xmrig_push
 
 bitcoin_image:
 	buildah bud \
@@ -59,6 +65,16 @@ dogecoin_image:
 
 dogecoin_push:
 	podman push $(DOGECOIN_TAG)
+
+electroneum_image:
+	buildah bud \
+		--build-arg ELECTRONEUM_VERSION=$(ELECTRONEUM_VERSION) \
+		-f electroneum.Dockerfile \
+		--squash \
+		-t $(ELECTRONEUM_TAG)
+
+electroneum_push:
+	podman push $(ELECTRONEUM_TAG)
 
 litecoin_image:
 	buildah bud \
