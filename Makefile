@@ -24,6 +24,13 @@ MONERO_TAG := $(BASE_TAG)_monero:$(MONERO_VERSION)
 RAVEN_VERSION := 4.3.2.0
 RAVEN_TAG := $(BASE_TAG)_raven:$(RAVEN_VERSION)
 
+# self hosted git doesnt support version munging
+WOWNERO_URL := https://git.wownero.com/attachments/ff0be4f5-37b6-4208-aee3-0ca4c8e97c89
+WOWNERO_HASH := 709b905cf853035b1e1660f9de54be44ef4fcfef3924489bff38dc090866ff58
+WOWNERO_VERSION := 0.9.2.2
+WOWNERO_TAG := $(BASE_TAG)_wownero:$(WOWNERO_VERSION)
+
+
 XMRIG_VERSION := 6.9.0
 XMRIG_HASH := 2d67dd33adeb42ee4aa467d5638b0809b6ab1e0f88180e67bcc97a4fe21aa822
 XMRIG_TAG := $(BASE_TAG)_xmrig:$(XMRIG_VERSION)
@@ -84,6 +91,18 @@ raven_image:
 
 raven_push:
 	podman push $(RAVEN_TAG)
+
+wownero_image:
+	buildah bud \
+		--build-arg WOWNERO_URL=$(WOWNERO_URL) \
+		--build-arg WOWNERO_HASH=$(WOWNERO_HASH) \
+		--build-arg WOWNERO_VERSION=$(WOWNERO_VERSION) \
+		-f wownero.Dockerfile \
+		--squash \
+		-t $(WOWNERO_TAG)
+
+wownero_push:
+	podman push $(WOWNERO_TAG)
 
 
 xmrig_image:
