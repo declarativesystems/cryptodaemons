@@ -5,6 +5,12 @@ BITCOIN_VERSION := 0.21.0
 BITCOIN_HASH := da7766775e3f9c98d7a9145429f2be8297c2672fe5b118fd3dc2411fb48e0032
 BITCOIN_TAG := $(BASE_TAG)_bitcoin:$(BITCOIN_VERSION)
 
+# https://github.com/Chia-Network/chia-blockchain/releases
+# no checksums
+CHIA_VERSION := 1.0.3
+CHIA_TAG := $(BASE_TAG)_chia:$(BITCOIN_VERSION)
+
+
 # https://github.com/dogecoin/dogecoin/releases
 # dogecoin does not make checksums publicly available due to github:
 # https://github.com/dogecoin/dogecoin/issues/1372
@@ -41,8 +47,8 @@ XMRIG_VERSION := 6.9.0
 XMRIG_HASH := 2d67dd33adeb42ee4aa467d5638b0809b6ab1e0f88180e67bcc97a4fe21aa822
 XMRIG_TAG := $(BASE_TAG)_xmrig:$(XMRIG_VERSION)
 
-build_images: bitcoin_image dogecoin_image electroneum_image litecoin_image monero_image raven_image wownero_image xmrig_image
-push_images: bitcoin_push dogecoin_push electroneum_push litecoin_push monero_push raven_push wownero_push xmrig_push
+build_images: bitcoin_image chia_image dogecoin_image electroneum_image litecoin_image monero_image raven_image wownero_image xmrig_image
+push_images: bitcoin_push chia_push dogecoin_push electroneum_push litecoin_push monero_push raven_push wownero_push xmrig_push
 
 bitcoin_image:
 	buildah bud \
@@ -55,6 +61,15 @@ bitcoin_image:
 bitcoin_push:
 	podman push $(BITCOIN_TAG)
 
+chia_image:
+	buildah bud \
+		--build-arg CHIA_VERSION=$(CHIA_VERSION) \
+		-f chia.Dockerfile \
+		--squash \
+		-t $(CHIA_TAG)
+
+chia_push:
+	podman push $(CHIA_TAG)
 
 dogecoin_image:
 	buildah bud \
