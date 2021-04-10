@@ -8,7 +8,7 @@ BITCOIN_TAG := $(BASE_TAG)_bitcoin:$(BITCOIN_VERSION)
 # https://github.com/Chia-Network/chia-blockchain/releases
 # no checksums
 CHIA_VERSION := 1.0.3
-CHIA_TAG := $(BASE_TAG)_chia:$(BITCOIN_VERSION)
+CHIA_TAG := $(BASE_TAG)_chia:$(CHIA_VERSION)
 
 
 # https://github.com/dogecoin/dogecoin/releases
