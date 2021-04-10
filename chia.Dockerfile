@@ -27,4 +27,7 @@ ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 
 EXPOSE 8444
 
-ENTRYPOINT ["chia"]
+# chia commands background themselves and exit the container. they
+# need to run in foreground...
+# ENTRYPOINT ["chia"]
+ENTRYPOINT ["tail", "-f", "/dev/null"]
