@@ -21,8 +21,8 @@ MONERO_VERSION := 0.17.3.2
 MONERO_HASH := 1e54acd749265d9439d3733441c645d9b058316283c8f21cca2a333c1238cd16
 MONERO_TAG := $(BASE_TAG)_monero:$(MONERO_VERSION)
 
-# https://github.com/RavenProject/Ravencoin
-RAVEN_VERSION := 4.3.2.0
+# https://github.com/RavenProject/Ravencoin/releases
+RAVEN_VERSION := 4.3.2.1
 RAVEN_TAG := $(BASE_TAG)_raven:$(RAVEN_VERSION)
 
 # self hosted git doesnt support version munging
