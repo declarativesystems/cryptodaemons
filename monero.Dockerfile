@@ -7,6 +7,7 @@ RUN apt-get update \
     && apt-get install -y \
       curl \
       bzip2 \
+    && rm -rf /var/lib/apt/lists/* \
     && mkdir /root/.bitmonero /app \
     && cd /app \
     && curl "https://downloads.getmonero.org/cli/monero-linux-x64-v${MONERO_VERSION}.tar.bz2" -O \
