@@ -1,19 +1,19 @@
-FROM ubuntu:focal-20210119
+FROM ubuntu:jammy-20220531
 
 ARG DOGECOIN_VERSION
 
 ARG DEBIAN_FRONTEND=noninteractive
-RUN apt-get update && apt-get install -y curl bzip2
-
-RUN mkdir /root/.dogecoin
-
-RUN cd /root \
+RUN apt-get update \
+    && apt-get install -y curl \
+    && rm -rf /var/lib/apt/lists/* \
+    && mkdir /root/.dogecoin /app \
+    && cd /app \
     && curl -L "https://github.com/dogecoin/dogecoin/releases/download/v${DOGECOIN_VERSION}/dogecoin-${DOGECOIN_VERSION}-x86_64-linux-gnu.tar.gz" -O \
     && tar -zxvf "dogecoin-${DOGECOIN_VERSION}-x86_64-linux-gnu.tar.gz" \
     && rm "dogecoin-${DOGECOIN_VERSION}-x86_64-linux-gnu.tar.gz"  \
     && ln -s "./dogecoin-${DOGECOIN_VERSION}" dogecoin
 
-WORKDIR /root/dogecoin
+WORKDIR /app/dogecoin
 
 # blockchain location
 VOLUME /root/.dogecoin
@@ -27,4 +27,4 @@ EXPOSE 44555
 EXPOSE 44556
 
 
-ENTRYPOINT ["/root/dogecoin/bin/dogecoind"]
+ENTRYPOINT ["/app/dogecoin/bin/dogecoind"]

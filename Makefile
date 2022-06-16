@@ -8,7 +8,7 @@ BITCOIN_TAG := $(BASE_TAG)_bitcoin:$(BITCOIN_VERSION)
 # https://github.com/dogecoin/dogecoin/releases
 # dogecoin does not make checksums publicly available due to github:
 # https://github.com/dogecoin/dogecoin/issues/1372
-DOGECOIN_VERSION := 1.14.2
+DOGECOIN_VERSION := 1.14.5
 DOGECOIN_TAG := $(BASE_TAG)_dogecoin:$(DOGECOIN_VERSION)
 
 # https://github.com/litecoin-project/litecoin/releases
