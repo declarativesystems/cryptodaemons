@@ -1,15 +1,16 @@
-FROM ubuntu:focal-20210119
+FROM ubuntu:jammy-20220531
 
 ARG WOWNERO_URL
 ARG WOWNERO_HASH
 ARG WOWNERO_VERSION
 ARG DEBIAN_FRONTEND=noninteractive
-RUN apt-get update && apt-get install -y curl bzip2
-
-RUN mkdir /root/.wownero \
-    && mkdir /app
-
-RUN cd /app \
+RUN apt-get update \
+    && apt-get install -y \
+      curl \
+      bzip2 \
+    && rm -rf /var/lib/apt/lists/* \
+    && mkdir /root/.wownero /app \
+    && cd /app \
     && curl "$WOWNERO_URL" -Lo wownero-linux-x64-v${WOWNERO_VERSION}.tar.bz2 \
     && echo "${WOWNERO_HASH} wownero-linux-x64-v${WOWNERO_VERSION}.tar.bz2" | sha256sum --check \
     && tar -xjvf "wownero-linux-x64-v${WOWNERO_VERSION}.tar.bz2" \

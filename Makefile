@@ -26,10 +26,10 @@ RAVEN_VERSION := 4.3.2.1
 RAVEN_TAG := $(BASE_TAG)_raven:$(RAVEN_VERSION)
 
 # self hosted git doesnt support version munging
-# https://git.wownero.com/wownero/wownero
-WOWNERO_URL := https://git.wownero.com/attachments/ff0be4f5-37b6-4208-aee3-0ca4c8e97c89
-WOWNERO_HASH := 709b905cf853035b1e1660f9de54be44ef4fcfef3924489bff38dc090866ff58
-WOWNERO_VERSION := 0.9.2.2
+# https://git.wownero.com/wownero/wownero/releases
+WOWNERO_URL := https://git.wownero.com/attachments/b5cc0583-9787-4b9e-94f4-26101025354c
+WOWNERO_HASH := cf1c822dfef2377f79a48ebf51054441e152b71f06760f81a02613ffa1dc69b2
+WOWNERO_VERSION := 0.10.1.0
 WOWNERO_TAG := $(BASE_TAG)_wownero:$(WOWNERO_VERSION)
 
 build_images: bitcoin_image chia_image dogecoin_image electroneum_image litecoin_image monero_image raven_image wownero_image xmrig_image
