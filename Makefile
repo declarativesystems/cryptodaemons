@@ -12,8 +12,8 @@ DOGECOIN_VERSION := 1.14.5
 DOGECOIN_TAG := $(BASE_TAG)_dogecoin:$(DOGECOIN_VERSION)
 
 # https://github.com/litecoin-project/litecoin/releases
-LITECOIN_VERSION := 0.18.1
-LITECOIN_HASH := ca50936299e2c5a66b954c266dcaaeef9e91b2f5307069b9894048acf3eb5751
+LITECOIN_VERSION := 0.21.2
+LITECOIN_HASH := 94a10a217d91d29e97e7a0088bc1545f34b188297c3ce5b87b07e775d8d00b12
 LITECOIN_TAG := $(BASE_TAG)_litecoin:$(LITECOIN_VERSION)
 
 # https://github.com/monero-project/monero/releases

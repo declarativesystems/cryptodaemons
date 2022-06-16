@@ -1,22 +1,21 @@
-FROM ubuntu:focal-20210119
-
+FROM ubuntu:jammy-20220531
 ARG LITECOIN_VERSION
 ARG LITECOIN_HASH
 
 
 ARG DEBIAN_FRONTEND=noninteractive
-RUN apt-get update && apt-get install -y curl bzip2
+RUN apt-get update \
+  && apt-get install -y curl \
+  && rm -rf /var/lib/apt/lists/* \
+  && mkdir /root/.litecoin /app \
+  && cd /app \
+  && curl -L "https://download.litecoin.org/litecoin-${LITECOIN_VERSION}/linux/litecoin-${LITECOIN_VERSION}-x86_64-linux-gnu.tar.gz" -O \
+  && echo "${LITECOIN_HASH} litecoin-${LITECOIN_VERSION}-x86_64-linux-gnu.tar.gz" | sha256sum --check \
+  && tar -zxvf "litecoin-${LITECOIN_VERSION}-x86_64-linux-gnu.tar.gz" \
+  && rm "litecoin-${LITECOIN_VERSION}-x86_64-linux-gnu.tar.gz"  \
+  && ln -s "./litecoin-${LITECOIN_VERSION}" litecoin
 
-RUN mkdir /root/.litecoin
-
-RUN cd /root \
-    && curl -L "https://download.litecoin.org/litecoin-${LITECOIN_VERSION}/linux/litecoin-${LITECOIN_VERSION}-x86_64-linux-gnu.tar.gz" -O \
-    && echo "${LITECOIN_HASH} litecoin-${LITECOIN_VERSION}-x86_64-linux-gnu.tar.gz" | sha256sum --check \
-    && tar -zxvf "litecoin-${LITECOIN_VERSION}-x86_64-linux-gnu.tar.gz" \
-    && rm "litecoin-${LITECOIN_VERSION}-x86_64-linux-gnu.tar.gz"  \
-    && ln -s "./litecoin-${LITECOIN_VERSION}" litecoin
-
-WORKDIR /root/litecoin
+WORKDIR /app/litecoin
 
 # blockchain location
 VOLUME /root/.litecoin
@@ -29,4 +28,4 @@ EXPOSE 9333
 EXPOSE 19332
 EXPOSE 19335
 
-ENTRYPOINT ["/root/litecoin/bin/litecoind"]
+ENTRYPOINT ["/app/litecoin/bin/litecoind"]
