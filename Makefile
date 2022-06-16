@@ -1,8 +1,8 @@
-BASE_TAG := declarativesystems.jfrog.io/docker-local/cryptodaemons
+BASE_TAG := declarativesystems/cryptodaemons
 
 # https://github.com/bitcoin/bitcoin/releases
-BITCOIN_VERSION := 0.21.0
-BITCOIN_HASH := da7766775e3f9c98d7a9145429f2be8297c2672fe5b118fd3dc2411fb48e0032
+BITCOIN_VERSION := 23.0
+BITCOIN_HASH := 2cca490c1f2842884a3c5b0606f179f9f937177da4eadd628e3f7fd7e25d26d0
 BITCOIN_TAG := $(BASE_TAG)_bitcoin:$(BITCOIN_VERSION)
 
 # https://github.com/Chia-Network/chia-blockchain/releases
