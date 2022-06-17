@@ -4,26 +4,31 @@ on:
     branches:
       - master
 jobs:
-#  publish-bitcoin:
-#    uses: ./.github/workflows/publish.yml
-#    with:
-#      target: bitcoin
-#  publish-dogecoin:
-#    uses: ./.github/workflows/publish.yml
-#    with:
-#      target: dogecoin
-#  publish-litecoin:
-#    uses: ./.github/workflows/publish.yml
-#    with:
-#      target: litecoin
-#  publish-monero:
-#    uses: ./.github/workflows/publish.yml
-#    with:
-#      target: monero
-#  publish-raven:
-#    uses: ./.github/workflows/publish.yml
-#    with:
-#      target: raven
+  publish-bitcoin:
+    uses: ./.github/workflows/publish.yml
+    with:
+      target: bitcoin
+    secrets: inherit
+  publish-dogecoin:
+    uses: ./.github/workflows/publish.yml
+    with:
+      target: dogecoin
+    secrets: inherit
+  publish-litecoin:
+    uses: ./.github/workflows/publish.yml
+    with:
+      target: litecoin
+    secrets: inherit
+  publish-monero:
+    uses: ./.github/workflows/publish.yml
+    with:
+      target: monero
+    secrets: inherit
+  publish-raven:
+    uses: ./.github/workflows/publish.yml
+    with:
+      target: raven
+    secrets: inherit
   publish-wownero:
     uses: ./.github/workflows/publish.yml
     with:
