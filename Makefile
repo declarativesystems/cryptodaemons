@@ -96,4 +96,3 @@ wownero_image:
 
 wownero_push:
 	podman push $(WOWNERO_TAG)
-
