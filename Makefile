@@ -1,4 +1,4 @@
-BASE_TAG := declarativesystems/cryptodaemons
+BASE_TAG := quay.io/declarativesystems/cryptodaemons
 
 # https://github.com/bitcoin/bitcoin/releases
 BITCOIN_VERSION := 23.0
