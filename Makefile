@@ -32,8 +32,8 @@ WOWNERO_HASH := cf1c822dfef2377f79a48ebf51054441e152b71f06760f81a02613ffa1dc69b2
 WOWNERO_VERSION := 0.10.1.0
 WOWNERO_TAG := $(BASE_TAG)_wownero:$(WOWNERO_VERSION)
 
-build_images: bitcoin_image chia_image dogecoin_image electroneum_image litecoin_image monero_image raven_image wownero_image xmrig_image
-push_images: bitcoin_push chia_push dogecoin_push electroneum_push litecoin_push monero_push raven_push wownero_push xmrig_push
+build_images: bitcoin_image dogecoin_image litecoin_image monero_image raven_image wownero_image
+push_images: bitcoin_push dogecoin_push litecoin_push monero_push raven_push wownero_push
 
 bitcoin_image:
 	buildah bud \
