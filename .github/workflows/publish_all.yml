@@ -7,36 +7,48 @@ jobs:
   publish-bitcoin:
     runs-on: ubuntu-22.04
     steps:
+    - name: Check out repository code
+      uses: actions/checkout@v3
     - uses: ./.github/workflows/publish
       with:
         target: bitcoin
   publish-dogecoin:
     runs-on: ubuntu-22.04
     steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
       - uses: ./.github/workflows/publish
         with:
           target: dogecoin
   publish-litecoin:
     runs-on: ubuntu-22.04
     steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
       - uses: ./.github/workflows/publish
         with:
           target: litecoin
   publish-monero:
     runs-on: ubuntu-22.04
     steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
       - uses: ./.github/workflows/publish
         with:
           target: monero
   publish-raven:
     runs-on: ubuntu-22.04
     steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
       - uses: ./.github/workflows/publish
         with:
           target: raven
   publish-wownero:
     runs-on: ubuntu-22.04
     steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
       - uses: ./.github/workflows/publish
         with:
           target: wownero
