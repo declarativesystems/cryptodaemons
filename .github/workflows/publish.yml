@@ -1,4 +1,4 @@
-name: Build image
+name: publish image
 on:
   workflow_dispatch:
     inputs:
@@ -13,3 +13,9 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v3
       - run: make ${{ inputs.target }}_image
+  publish:
+    runs-on: ubuntu-22.04
+    needs: build
+    steps:
+      - run: podman login --username declarativesystems+github  --password ${{secrets.QUAY_IO}} quay.io
+      - run: make ${{ inputs.target }}_push
