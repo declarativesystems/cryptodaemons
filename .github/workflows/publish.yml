@@ -15,9 +15,6 @@ on:
         description: Target image to build (coin name)
         required: true
         type: string
-    secrets:
-      QUAY_IO:
-        required: true
 jobs:
   publish:
     runs-on: ubuntu-22.04
