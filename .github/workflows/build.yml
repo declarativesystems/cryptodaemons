@@ -1,5 +1,5 @@
 name: Build image
-on: []
+on: [workflow_run]
 jobs:
   build:
     runs-on: ubuntu-latest
