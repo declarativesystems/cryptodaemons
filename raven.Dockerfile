@@ -12,7 +12,9 @@ RUN apt-get update \
     && cd /app \
     && curl -L "https://github.com/RavenProject/Ravencoin/releases/download/v${RAVEN_VERSION}/raven-${RAVEN_VERSION}-x86_64-linux-gnu.zip" -O \
     && unzip "raven-${RAVEN_VERSION}-x86_64-linux-gnu.zip" \
+    && tar -zxvf linux/raven-${RAVEN_VERSION}-x86_64-linux-gnu.tar.gz \
     && rm "raven-${RAVEN_VERSION}-x86_64-linux-gnu.zip" \
+    && rm -rf "linux" \
     && ln -s "./raven-${RAVEN_VERSION}" raven
 
 WORKDIR /app/raven
