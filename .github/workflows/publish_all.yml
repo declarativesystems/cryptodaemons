@@ -3,6 +3,8 @@ on:
   push:
     branches:
       - master
+    paths:
+      - '!**.md'
 jobs:
   publish-bitcoin:
     uses: ./.github/workflows/publish.yml
