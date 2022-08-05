@@ -18,7 +18,7 @@ LITECOIN_TAG := $(BASE_TAG)_litecoin:$(LITECOIN_VERSION)
 
 # https://github.com/monero-project/monero/releases
 MONERO_VERSION := 0.18.0.0
-MONERO_HASH := a0680b4fcd4b5b75db9a903d17a8216cd250eff91ecbce769e6b920825c9a4c9
+MONERO_HASH := 74c440aa1e38a41ded0c4844b50f094146170ef83f1bd79d7e23d0d69b589faf
 MONERO_TAG := $(BASE_TAG)_monero:$(MONERO_VERSION)
 
 # https://github.com/RavenProject/Ravencoin/releases
