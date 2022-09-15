@@ -22,7 +22,8 @@ MONERO_HASH := 9318e522a5cf95bc856772f15d7507fdef2c028e01f70d020078ad5e208f1304
 MONERO_TAG := $(BASE_TAG)_monero:$(MONERO_VERSION)
 
 # https://github.com/RavenProject/Ravencoin/releases
-RAVEN_VERSION := 4.3.2.1
+RAVEN_VERSION := 4.6.1-7864c39c2
+RAVEN_HASH := 6c6ac6382cf594b218ec50dd9662892dc2d9a493ce151acb2d7feb500436c197
 RAVEN_TAG := $(BASE_TAG)_raven:$(RAVEN_VERSION)
 
 # self hosted git doesnt support version munging
@@ -78,6 +79,7 @@ monero_push:
 raven_image:
 	buildah bud \
 		--build-arg RAVEN_VERSION=$(RAVEN_VERSION) \
+		--build-arg RAVEN_HASH=$(RAVEN_HASH) \
 		-f raven.Dockerfile \
 		--squash \
 		-t $(RAVEN_TAG)

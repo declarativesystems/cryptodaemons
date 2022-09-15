@@ -1,20 +1,19 @@
 FROM ubuntu:jammy-20220531
 
 ARG RAVEN_VERSION
+ARG RAVEN_HASH
 
 ARG DEBIAN_FRONTEND=noninteractive
 RUN apt-get update \
     && apt-get install -y  \
       curl \
-      unzip \
     && rm -rf /var/lib/apt/lists/* \
     && mkdir /root/.raven /app \
     && cd /app \
-    && curl -L "https://github.com/RavenProject/Ravencoin/releases/download/v${RAVEN_VERSION}/raven-${RAVEN_VERSION}-x86_64-linux-gnu.zip" -O \
-    && unzip "raven-${RAVEN_VERSION}-x86_64-linux-gnu.zip" \
-    && tar -zxvf linux/raven-${RAVEN_VERSION}-x86_64-linux-gnu.tar.gz \
-    && rm "raven-${RAVEN_VERSION}-x86_64-linux-gnu.zip" \
-    && rm -rf "linux" \
+    && curl -L "https://github.com/RavenProject/Ravencoin/releases/download/v$(echo $RAVEN_VERSION | awk 'BEGIN{FS="-"} {print$1}')/raven-${RAVEN_VERSION}-x86_64-linux-gnu.tar.gz" -O \
+    && echo "${RAVEN_HASH} raven-${RAVEN_VERSION}-x86_64-linux-gnu.tar.gz" | sha256sum --check \
+    && tar -zxvf raven-${RAVEN_VERSION}-x86_64-linux-gnu.tar.gz \
+    && rm "raven-${RAVEN_VERSION}-x86_64-linux-gnu.tar.gz" \
     && ln -s "./raven-${RAVEN_VERSION}" raven
 
 WORKDIR /app/raven
