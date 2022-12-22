@@ -16,10 +16,20 @@ jobs:
     with:
       target: dogecoin
     secrets: inherit
+  publish-kaspa:
+    uses: ./.github/workflows/publish.yml
+    with:
+      target: kaspa
+    secrets: inherit
   publish-litecoin:
     uses: ./.github/workflows/publish.yml
     with:
       target: litecoin
+    secrets: inherit
+  publish-meowcoin:
+    uses: ./.github/workflows/publish.yml
+    with:
+      target: meowcoin
     secrets: inherit
   publish-monero:
     uses: ./.github/workflows/publish.yml
