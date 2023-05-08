@@ -12,12 +12,12 @@ DOGECOIN_VERSION := 1.14.6
 DOGECOIN_TAG := $(BASE_TAG)_dogecoin:$(DOGECOIN_VERSION)
 
 # https://github.com/kaspanet/kaspad/releases
-KASPA_VERSION := 0.12.11
+KASPA_VERSION := 0.12.13
 KASPA_TAG := $(BASE_TAG)_kaspa:$(KASPA_VERSION)
 
 # https://github.com/litecoin-project/litecoin/releases
-LITECOIN_VERSION := 0.21.2.1
-LITECOIN_HASH := 6e545d1ef0842b9c4ecaf2e22b43f17fd3fba73599b0d6cc1db0c9310f1a74ff
+LITECOIN_VERSION := 0.21.2.2
+LITECOIN_HASH := d53d429d4a0e36670df3d6c5c4eadfca6aac3d4b447a23106cfd490cfc77e9f2
 LITECOIN_TAG := $(BASE_TAG)_litecoin:$(LITECOIN_VERSION)
 
 # https://github.com/JustAResearcher/Meowcoin/releases
@@ -25,8 +25,8 @@ MEOWCOIN_VERSION := 1.0.3
 MEOWCOIN_TAG := $(BASE_TAG)_meowcoin:$(MEOWCOIN_VERSION)
 
 # https://github.com/monero-project/monero/releases
-MONERO_VERSION := 0.18.1.2
-MONERO_HASH := 7d51e7072351f65d0c7909e745827cfd3b00abe5e7c4cc4c104a3c9b526da07e
+MONERO_VERSION := 0.18.2.2
+MONERO_HASH := 186800de18f67cca8475ce392168aabeb5709a8f8058b0f7919d7c693786d56b
 MONERO_TAG := $(BASE_TAG)_monero:$(MONERO_VERSION)
 
 # https://github.com/RavenProject/Ravencoin/releases
@@ -36,9 +36,9 @@ RAVEN_TAG := $(BASE_TAG)_raven:$(RAVEN_VERSION)
 
 # self hosted git doesnt support version munging
 # https://git.wownero.com/wownero/wownero/releases
-WOWNERO_URL := https://git.wownero.com/attachments/b5cc0583-9787-4b9e-94f4-26101025354c
-WOWNERO_HASH := cf1c822dfef2377f79a48ebf51054441e152b71f06760f81a02613ffa1dc69b2
-WOWNERO_VERSION := 0.10.1.0
+WOWNERO_URL := https://git.wownero.com/attachments/c1de2873-a72d-41d3-a807-d36e8305ea3f
+WOWNERO_HASH := e31d9f1e76d5c65e774c4208dfd1a18cfeda9f3822facaf1d114459ca9a38320
+WOWNERO_VERSION := 0.11.0.3
 WOWNERO_TAG := $(BASE_TAG)_wownero:$(WOWNERO_VERSION)
 
 bitcoin_image:
