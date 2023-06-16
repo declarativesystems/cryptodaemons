@@ -1,8 +1,8 @@
 BASE_TAG := quay.io/declarativesystems/cryptodaemons
 
 # https://github.com/bitcoin/bitcoin/releases
-BITCOIN_VERSION := 24.0.1
-BITCOIN_HASH := 49df6e444515d457ea0b885d66f521f2a26ca92ccf73d5296082e633544253bf
+BITCOIN_VERSION := 25.0
+BITCOIN_HASH := 33930d432593e49d58a9bff4c30078823e9af5d98594d2935862788ce8a20aec
 BITCOIN_TAG := $(BASE_TAG)_bitcoin:$(BITCOIN_VERSION)
 
 # https://github.com/dogecoin/dogecoin/releases
