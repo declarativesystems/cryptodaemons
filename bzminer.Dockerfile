@@ -1,4 +1,4 @@
-FROM ubuntu:mantic-20231011
+FROM debian:bookworm-20231030
 
 ARG BZMINER_VERSION
 
