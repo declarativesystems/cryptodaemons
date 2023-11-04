@@ -3,10 +3,13 @@ FROM debian:bookworm-20231030
 ARG BZMINER_VERSION
 
 ARG DEBIAN_FRONTEND=noninteractive
-RUN apt-get update \
+RUN sed -i -e "s/ main[[:space:]]*\$/ main contrib non-free/" /etc/apt/sources.list \
+    && apt-get update \
     && apt-get install -y  \
         curl \
         ocl-icd-opencl-dev \
+        nvidia-cuda-dev \
+         nvidia-cuda-toolkit \
     && mkdir /app \
     && cd /app \
     && curl -O -L https://github.com/bzminer/bzminer/releases/download/v${BZMINER_VERSION}/bzminer_v${BZMINER_VERSION}_linux.tar.gz \
