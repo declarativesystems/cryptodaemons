@@ -3,7 +3,7 @@ FROM debian:bookworm-20231030
 ARG BZMINER_VERSION
 
 ARG DEBIAN_FRONTEND=noninteractive
-RUN sed -i -e "s/ main[[:space:]]*\$/ main contrib non-free/" /etc/apt/sources.list \
+RUN sed -i -e "s/^Components: main$/Components: main non-free/" /etc/apt/sources.list.d/debian.sources \
     && apt-get update \
     && apt-get install -y  \
         curl \
