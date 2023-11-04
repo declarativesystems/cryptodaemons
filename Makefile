@@ -20,6 +20,10 @@ LITECOIN_VERSION := 0.21.2.2
 LITECOIN_HASH := d53d429d4a0e36670df3d6c5c4eadfca6aac3d4b447a23106cfd490cfc77e9f2
 LITECOIN_TAG := $(BASE_TAG)_litecoin:$(LITECOIN_VERSION)
 
+# https://github.com/Lolliedieb/lolMiner-releases/releases
+LOLMINER_VERSION := 1.76a
+LOLMINER_TAG := $(BASE_TAG)_lolminer:$(LOLMINER_VERSION)
+
 # https://github.com/JustAResearcher/Meowcoin/releases
 MEOWCOIN_VERSION := 1.0.3
 MEOWCOIN_TAG := $(BASE_TAG)_meowcoin:$(MEOWCOIN_VERSION)
@@ -82,6 +86,16 @@ litecoin_image:
 
 litecoin_push:
 	podman push $(LITECOIN_TAG)
+
+lolminer_image:
+	buildah bud \
+		--build-arg LOLMINER_VERSION=$(LOLMINER_VERSION) \
+		-f lolminer.Dockerfile \
+		--squash \
+		-t $(LOLMINER_TAG)
+
+lolminer_push:
+	podman push $(LOLMINER_TAG)
 
 meowcoin_image:
 	buildah bud \
