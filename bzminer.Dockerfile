@@ -1,4 +1,4 @@
-FROM ubuntu:lunar-20231004
+FROM ubuntu:mantic-20231011
 
 ARG BZMINER_VERSION
 
