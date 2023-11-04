@@ -5,6 +5,10 @@ BITCOIN_VERSION := 25.0
 BITCOIN_HASH := 33930d432593e49d58a9bff4c30078823e9af5d98594d2935862788ce8a20aec
 BITCOIN_TAG := $(BASE_TAG)_bitcoin:$(BITCOIN_VERSION)
 
+# https://github.com/bzminer/bzminer/releases
+BZMINER_VERSION := 17.0.0
+BZMINER_TAG := $(BASE_TAG)_bzminer:$(BZMINER_VERSION)
+
 # https://github.com/dogecoin/dogecoin/releases
 # dogecoin does not make checksums publicly available due to github:
 # https://github.com/dogecoin/dogecoin/issues/1372
@@ -55,6 +59,16 @@ bitcoin_image:
 
 bitcoin_push:
 	podman push $(BITCOIN_TAG)
+
+bzminer_image:
+	buildah bud \
+		--build-arg BZMINER_VERSION=$(BZMINER_VERSION) \
+		-f bzminer.Dockerfile \
+		--squash \
+		-t $(BZMINER_TAG)
+
+bzminer_push:
+	podman push $(BZMINER_TAG)
 
 dogecoin_image:
 	buildah bud \
