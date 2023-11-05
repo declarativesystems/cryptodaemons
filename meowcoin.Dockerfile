@@ -1,4 +1,4 @@
-FROM ubuntu:jammy-20220531
+FROM ubuntu:mantic-20231011
 
 ARG MEOWCOIN_VERSION
 
