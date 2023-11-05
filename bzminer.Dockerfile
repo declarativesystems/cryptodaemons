@@ -1,4 +1,5 @@
-FROM docker.io/nvidia/cuda:12.2.2-base-ubuntu22.04
+#FROM docker.io/nvidia/cuda:12.2.2-base-ubuntu22.04
+FROM docker.io/nvidia/cuda:11.8.0-base-ubuntu22.04
 
 ARG BZMINER_VERSION
 
