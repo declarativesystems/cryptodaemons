@@ -1,8 +1,8 @@
 BASE_TAG := quay.io/declarativesystems/cryptodaemons
 
 # https://github.com/bitcoin/bitcoin/releases
-BITCOIN_VERSION := 25.0
-BITCOIN_HASH := 33930d432593e49d58a9bff4c30078823e9af5d98594d2935862788ce8a20aec
+BITCOIN_VERSION := 25.1
+BITCOIN_HASH := a978c407b497a727f0444156e397b50491ce862d1f906fef9b521415b3611c8b
 BITCOIN_TAG := $(BASE_TAG)_bitcoin:$(BITCOIN_VERSION)
 
 # https://github.com/bzminer/bzminer/releases
@@ -29,12 +29,12 @@ LOLMINER_VERSION := 1.76a
 LOLMINER_TAG := $(BASE_TAG)_lolminer:$(LOLMINER_VERSION)
 
 # https://github.com/JustAResearcher/Meowcoin/releases
-MEOWCOIN_VERSION := 1.0.3
+MEOWCOIN_VERSION := 1.0.4
 MEOWCOIN_TAG := $(BASE_TAG)_meowcoin:$(MEOWCOIN_VERSION)
 
 # https://github.com/monero-project/monero/releases
-MONERO_VERSION := 0.18.2.2
-MONERO_HASH := 186800de18f67cca8475ce392168aabeb5709a8f8058b0f7919d7c693786d56b
+MONERO_VERSION := 0.18.3.1
+MONERO_HASH := 23af572fdfe3459b9ab97e2e9aa7e3c11021c955d6064b801a27d7e8c21ae09d
 MONERO_TAG := $(BASE_TAG)_monero:$(MONERO_VERSION)
 
 # https://github.com/RavenProject/Ravencoin/releases
@@ -45,8 +45,8 @@ RAVEN_TAG := $(BASE_TAG)_raven:$(RAVEN_VERSION)
 # self hosted git doesnt support version munging
 # https://git.wownero.com/wownero/wownero/releases
 WOWNERO_URL := https://git.wownero.com/attachments/c1de2873-a72d-41d3-a807-d36e8305ea3f
-WOWNERO_HASH := e31d9f1e76d5c65e774c4208dfd1a18cfeda9f3822facaf1d114459ca9a38320
-WOWNERO_VERSION := 0.11.0.3
+WOWNERO_HASH := a5b2aa0cffa4c7bf82d9d6072aca0bdeb501bdbde33db1d04edb2c4089878e82
+WOWNERO_VERSION := 0.11.1.0
 WOWNERO_TAG := $(BASE_TAG)_wownero:$(WOWNERO_VERSION)
 
 bitcoin_image:
