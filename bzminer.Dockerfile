@@ -1,15 +1,12 @@
-FROM debian:bookworm-20231030
+FROM docker.io/nvidia/cuda:12.2.2-base-ubuntu22.04
 
 ARG BZMINER_VERSION
 
 ARG DEBIAN_FRONTEND=noninteractive
-RUN sed -i -e "s/^Components: main$/Components: main non-free-firmware non-free contrib/" /etc/apt/sources.list.d/debian.sources \
-    && apt-get update \
-    && apt-get install -y  \
+RUN apt-get update \
+    && apt-get install -y \
         curl \
-        ocl-icd-opencl-dev \
-        nvidia-cuda-dev \
-        nvidia-cuda-toolkit \
+        ocl-icd-opencl-dev\
     && mkdir /app \
     && cd /app \
     && curl -O -L https://github.com/bzminer/bzminer/releases/download/v${BZMINER_VERSION}/bzminer_v${BZMINER_VERSION}_linux.tar.gz \
