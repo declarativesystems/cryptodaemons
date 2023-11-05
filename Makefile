@@ -44,7 +44,7 @@ RAVEN_TAG := $(BASE_TAG)_raven:$(RAVEN_VERSION)
 
 # self hosted git doesnt support version munging
 # https://git.wownero.com/wownero/wownero/releases
-WOWNERO_URL := https://git.wownero.com/attachments/c1de2873-a72d-41d3-a807-d36e8305ea3f
+WOWNERO_URL := https://git.wownero.com/attachments/280753b0-3af0-4a78-a248-8b925e8f4593
 WOWNERO_HASH := a5b2aa0cffa4c7bf82d9d6072aca0bdeb501bdbde33db1d04edb2c4089878e82
 WOWNERO_VERSION := 0.11.1.0
 WOWNERO_TAG := $(BASE_TAG)_wownero:$(WOWNERO_VERSION)
