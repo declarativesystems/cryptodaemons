@@ -14,7 +14,7 @@ RUN apt-get update \
     && tar -zxvf "meowcoin-${MEOWCOIN_VERSION}-x86_64-linux-gnu.tar.gz" \
     && rm "meowcoin-${MEOWCOIN_VERSION}-x86_64-linux-gnu.tar.gz" \
     && cd .. \
-    && ln -s "./meowcoin-${MEOWCOIN_VERSION}" meowcoin
+    && ln -s "./meowcoin-${MEOWCOIN_VERSION}/meowcoin-${MEOWCOIN_VERSION}" meowcoin
 
 WORKDIR /app/meowcoin
 
@@ -25,4 +25,4 @@ VOLUME /root/.meowcoin
 EXPOSE 8788
 EXPOSE 9766
 
-ENTRYPOINT ["/app/meowcoin/meowcoind"]
+ENTRYPOINT ["/app/meowcoin/bin/meowcoind"]
