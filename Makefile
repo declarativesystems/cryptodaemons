@@ -16,7 +16,7 @@ DOGECOIN_VERSION := 1.14.6
 DOGECOIN_TAG := $(BASE_TAG)_dogecoin:$(DOGECOIN_VERSION)
 
 # https://github.com/kaspanet/kaspad/releases
-KASPA_VERSION := 0.12.14
+KASPA_VERSION := 0.12.15
 KASPA_TAG := $(BASE_TAG)_kaspa:$(KASPA_VERSION)
 
 # https://github.com/litecoin-project/litecoin/releases
@@ -25,7 +25,7 @@ LITECOIN_HASH := d53d429d4a0e36670df3d6c5c4eadfca6aac3d4b447a23106cfd490cfc77e9f
 LITECOIN_TAG := $(BASE_TAG)_litecoin:$(LITECOIN_VERSION)
 
 # https://github.com/Lolliedieb/lolMiner-releases/releases
-LOLMINER_VERSION := 1.76a
+LOLMINER_VERSION := 1.77b
 LOLMINER_TAG := $(BASE_TAG)_lolminer:$(LOLMINER_VERSION)
 
 # https://github.com/JustAResearcher/Meowcoin/releases
