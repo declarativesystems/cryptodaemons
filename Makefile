@@ -6,7 +6,7 @@ BITCOIN_HASH := a978c407b497a727f0444156e397b50491ce862d1f906fef9b521415b3611c8b
 BITCOIN_TAG := $(BASE_TAG)_bitcoin:$(BITCOIN_VERSION)
 
 # https://github.com/bzminer/bzminer/releases
-BZMINER_VERSION := 17.0.0
+BZMINER_VERSION := 19.2.1
 BZMINER_TAG := $(BASE_TAG)_bzminer:$(BZMINER_VERSION)
 
 # https://github.com/dogecoin/dogecoin/releases
