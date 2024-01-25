@@ -6,7 +6,7 @@ BITCOIN_HASH := a978c407b497a727f0444156e397b50491ce862d1f906fef9b521415b3611c8b
 BITCOIN_TAG := $(BASE_TAG)_bitcoin:$(BITCOIN_VERSION)
 
 # https://github.com/bzminer/bzminer/releases
-BZMINER_VERSION := 19.2.1
+BZMINER_VERSION := 19.3.0
 BZMINER_TAG := $(BASE_TAG)_bzminer:$(BZMINER_VERSION)
 
 # https://github.com/dogecoin/dogecoin/releases
@@ -29,7 +29,7 @@ LOLMINER_VERSION := 1.77b
 LOLMINER_TAG := $(BASE_TAG)_lolminer:$(LOLMINER_VERSION)
 
 # https://github.com/JustAResearcher/Meowcoin/releases
-MEOWCOIN_VERSION := 1.0.4
+MEOWCOIN_VERSION := 1.0.7
 MEOWCOIN_TAG := $(BASE_TAG)_meowcoin:$(MEOWCOIN_VERSION)
 
 # https://github.com/monero-project/monero/releases
