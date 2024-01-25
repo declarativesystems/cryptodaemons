@@ -115,6 +115,7 @@ lolminer_push:
 meowcoin_image:
 	buildah bud \
 		--build-arg MEOWCOIN_VERSION=$(MEOWCOIN_VERSION) \
+		--build-arg MEOWCOIN_URL=$(MEOWCOIN_URL) \
 		-f meowcoin.Dockerfile \
 		--squash \
 		-t $(MEOWCOIN_TAG)
