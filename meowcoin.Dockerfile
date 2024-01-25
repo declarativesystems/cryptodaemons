@@ -1,6 +1,7 @@
 FROM ubuntu:mantic-20231011
 
 ARG MEOWCOIN_VERSION
+ARG MEOWCOIN_URL
 
 ARG DEBIAN_FRONTEND=noninteractive
 # note version in GH download dir - missing period!
