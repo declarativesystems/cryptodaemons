@@ -9,13 +9,12 @@ RUN MEOWCOIN_TARBALL=$(basename ${MEOWCOIN_URL}) \
     && apt-get install -y  \
       curl \
     && rm -rf /var/lib/apt/lists/* \
-    && mkdir /root/.meowcoin /app /app/meowcoin-${MEOWCOIN_VERSION} \
-    && cd /app/meowcoin-${MEOWCOIN_VERSION} \
+    && mkdir /root/.meowcoin /app \
+    && cd /app \
     && curl -L -O ${MEOWCOIN_URL} \
     && tar -zxvf ${MEOWCOIN_TARBALL} \
     && rm "${MEOWCOIN_TARBALL}" \
-    && cd .. \
-    && ln -s "./$(basename ${MEOWCOIN_TARBALL} .tar.gz)" meowcoin
+    && ln -s "./$(basename ${MEOWCOIN_TARBALL} -x86_64-linux-gnu.tar.gz)" meowcoin
 
 WORKDIR /app/meowcoin
 
