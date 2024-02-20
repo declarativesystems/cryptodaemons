@@ -1,12 +1,12 @@
 BASE_TAG := quay.io/declarativesystems/cryptodaemons
 
 # https://github.com/bitcoin/bitcoin/releases
-BITCOIN_VERSION := 25.1
-BITCOIN_HASH := a978c407b497a727f0444156e397b50491ce862d1f906fef9b521415b3611c8b
+BITCOIN_VERSION := 26.0
+BITCOIN_HASH := 23e5ab226d9e01ffaadef5ffabe8868d0db23db952b90b0593652993680bb8ab
 BITCOIN_TAG := $(BASE_TAG)_bitcoin:$(BITCOIN_VERSION)
 
 # https://github.com/bzminer/bzminer/releases
-BZMINER_VERSION := 19.3.0
+BZMINER_VERSION := 20.0.0
 BZMINER_TAG := $(BASE_TAG)_bzminer:$(BZMINER_VERSION)
 
 # https://github.com/dogecoin/dogecoin/releases
@@ -29,8 +29,8 @@ LOLMINER_VERSION := 1.77b
 LOLMINER_TAG := $(BASE_TAG)_lolminer:$(LOLMINER_VERSION)
 
 # https://github.com/JustAResearcher/Meowcoin/releases
-MEOWCOIN_VERSION := 1.0.7
-MEOWCOIN_URL := https://github.com/JustAResearcher/Meowcoin/releases/download/v1.0.7/meowcoin-1.0.7-b69a4f8b5-x86_64-linux-gnu.tar.gz
+MEOWCOIN_VERSION := 2.0.3
+MEOWCOIN_URL := https://github.com/JustAResearcher/Meowcoin/releases/download/Meow-v2.0.3/meowcoin-2.0.3-e84f4f8c5-x86_64-linux-gnu.tar.gz
 MEOWCOIN_TAG := $(BASE_TAG)_meowcoin:$(MEOWCOIN_VERSION)
 
 # https://github.com/monero-project/monero/releases
