@@ -1,18 +1,18 @@
 BASE_TAG := quay.io/declarativesystems/cryptodaemons
 
 # https://github.com/bitcoin/bitcoin/releases
-BITCOIN_VERSION := 26.0
-BITCOIN_HASH := 23e5ab226d9e01ffaadef5ffabe8868d0db23db952b90b0593652993680bb8ab
+BITCOIN_VERSION := 27.0
+BITCOIN_HASH := 2a6974c5486f528793c79d42694b5987401e4a43c97f62b1383abf35bcee44a8
 BITCOIN_TAG := $(BASE_TAG)_bitcoin:$(BITCOIN_VERSION)
 
 # https://github.com/bzminer/bzminer/releases
-BZMINER_VERSION := 20.0.0
+BZMINER_VERSION := 21.1.5
 BZMINER_TAG := $(BASE_TAG)_bzminer:$(BZMINER_VERSION)
 
 # https://github.com/dogecoin/dogecoin/releases
 # dogecoin does not make checksums publicly available due to github:
 # https://github.com/dogecoin/dogecoin/issues/1372
-DOGECOIN_VERSION := 1.14.6
+DOGECOIN_VERSION := 1.14.7
 DOGECOIN_TAG := $(BASE_TAG)_dogecoin:$(DOGECOIN_VERSION)
 
 # https://github.com/kaspanet/kaspad/releases
@@ -20,22 +20,22 @@ KASPA_VERSION := 0.12.15
 KASPA_TAG := $(BASE_TAG)_kaspa:$(KASPA_VERSION)
 
 # https://github.com/litecoin-project/litecoin/releases
-LITECOIN_VERSION := 0.21.2.2
-LITECOIN_HASH := d53d429d4a0e36670df3d6c5c4eadfca6aac3d4b447a23106cfd490cfc77e9f2
+LITECOIN_VERSION := 0.21.3
+LITECOIN_HASH := ea231c630e2a243cb01affd4c2b95a2be71560f80b64b9f4bceaa13d736aa7cb
 LITECOIN_TAG := $(BASE_TAG)_litecoin:$(LITECOIN_VERSION)
 
 # https://github.com/Lolliedieb/lolMiner-releases/releases
-LOLMINER_VERSION := 1.77b
+LOLMINER_VERSION := 1.88
 LOLMINER_TAG := $(BASE_TAG)_lolminer:$(LOLMINER_VERSION)
 
 # https://github.com/JustAResearcher/Meowcoin/releases
-MEOWCOIN_VERSION := 2.0.3
+MEOWCOIN_VERSION := 2.0.4
 MEOWCOIN_URL := https://github.com/JustAResearcher/Meowcoin/releases/download/Meow-v2.0.3/meowcoin-2.0.3-e84f4f8c5-x86_64-linux-gnu.tar.gz
 MEOWCOIN_TAG := $(BASE_TAG)_meowcoin:$(MEOWCOIN_VERSION)
 
 # https://github.com/monero-project/monero/releases
-MONERO_VERSION := 0.18.3.1
-MONERO_HASH := 23af572fdfe3459b9ab97e2e9aa7e3c11021c955d6064b801a27d7e8c21ae09d
+MONERO_VERSION := 0.18.3.3
+MONERO_HASH := 47c7e6b4b88a57205800a2538065a7874174cd087eedc2526bee1ebcce0cc5e3
 MONERO_TAG := $(BASE_TAG)_monero:$(MONERO_VERSION)
 
 # https://github.com/RavenProject/Ravencoin/releases
