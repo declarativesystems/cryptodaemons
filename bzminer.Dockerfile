@@ -9,7 +9,8 @@ ARG DEBIAN_FRONTEND=noninteractive
 RUN apt-get update \
     && apt-get install -y \
         curl \
-        ocl-icd-opencl-dev\
+        ocl-icd-opencl-dev \
+        lshw \
     && mkdir /app \
     && cd /app \
     && curl -O -L https://github.com/bzminer/bzminer/releases/download/v${BZMINER_VERSION}/bzminer_v${BZMINER_VERSION}_linux.tar.gz \
