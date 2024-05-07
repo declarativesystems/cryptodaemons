@@ -1,7 +1,7 @@
 #FROM docker.io/nvidia/cuda:12.2.2-base-ubuntu22.04
 # bzminer requires CUDA 11 - run with CUDA 12 gives error:
 # <Warn> CUDA Error: forward compatibility was attempted on non supported HW
-FROM docker.io/nvidia/cuda:11.8.0-base-ubuntu22.04
+FROM docker.io/nvidia/cuda:12.4.1-base-ubuntu22.04
 
 ARG BZMINER_VERSION
 
