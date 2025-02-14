@@ -1,8 +1,8 @@
 BASE_TAG := quay.io/declarativesystems/cryptodaemons
 
 # https://github.com/bitcoin/bitcoin/releases
-BITCOIN_VERSION := 27.0
-BITCOIN_HASH := 2a6974c5486f528793c79d42694b5987401e4a43c97f62b1383abf35bcee44a8
+BITCOIN_VERSION := 28.1
+BITCOIN_HASH := 07f77afd326639145b9ba9562912b2ad2ccec47b8a305bd075b4f4cb127b7ed7
 BITCOIN_TAG := $(BASE_TAG)_bitcoin:$(BITCOIN_VERSION)
 
 # https://github.com/bzminer/bzminer/releases
@@ -12,7 +12,7 @@ BZMINER_TAG := $(BASE_TAG)_bzminer:$(BZMINER_VERSION)
 # https://github.com/dogecoin/dogecoin/releases
 # dogecoin does not make checksums publicly available due to github:
 # https://github.com/dogecoin/dogecoin/issues/1372
-DOGECOIN_VERSION := 1.14.7
+DOGECOIN_VERSION := 1.14.9
 DOGECOIN_TAG := $(BASE_TAG)_dogecoin:$(DOGECOIN_VERSION)
 
 # https://github.com/kaspanet/kaspad/releases
@@ -20,8 +20,8 @@ KASPA_VERSION := 0.12.15
 KASPA_TAG := $(BASE_TAG)_kaspa:$(KASPA_VERSION)
 
 # https://github.com/litecoin-project/litecoin/releases
-LITECOIN_VERSION := 0.21.3
-LITECOIN_HASH := ea231c630e2a243cb01affd4c2b95a2be71560f80b64b9f4bceaa13d736aa7cb
+LITECOIN_VERSION := 0.21.4
+LITECOIN_HASH := 857fc41091f2bae65c3bf0fd4d388fca915fc93a03f16dd2578ac3cc92898390
 LITECOIN_TAG := $(BASE_TAG)_litecoin:$(LITECOIN_VERSION)
 
 # https://github.com/Lolliedieb/lolMiner-releases/releases
@@ -29,13 +29,13 @@ LOLMINER_VERSION := 1.88
 LOLMINER_TAG := $(BASE_TAG)_lolminer:$(LOLMINER_VERSION)
 
 # https://github.com/JustAResearcher/Meowcoin/releases
-MEOWCOIN_VERSION := 2.0.4
-MEOWCOIN_URL := https://github.com/JustAResearcher/Meowcoin/releases/download/Meow-v2.0.3/meowcoin-2.0.3-e84f4f8c5-x86_64-linux-gnu.tar.gz
+MEOWCOIN_VERSION := 2.0.5
+MEOWCOIN_URL := https://github.com/Meowcoin-Foundation/Meowcoin/releases/download/Meow-v2.0.5/meowcoin-2.0.5-673684e10-x86_64-linux-gnu.tar.gz
 MEOWCOIN_TAG := $(BASE_TAG)_meowcoin:$(MEOWCOIN_VERSION)
 
 # https://github.com/monero-project/monero/releases
-MONERO_VERSION := 0.18.3.3
-MONERO_HASH := 47c7e6b4b88a57205800a2538065a7874174cd087eedc2526bee1ebcce0cc5e3
+MONERO_VERSION := 0.18.3.4
+MONERO_HASH := 51ba03928d189c1c11b5379cab17dd9ae8d2230056dc05c872d0f8dba4a87f1d
 MONERO_TAG := $(BASE_TAG)_monero:$(MONERO_VERSION)
 
 # https://github.com/RavenProject/Ravencoin/releases
@@ -44,10 +44,10 @@ RAVEN_HASH := 6c6ac6382cf594b218ec50dd9662892dc2d9a493ce151acb2d7feb500436c197
 RAVEN_TAG := $(BASE_TAG)_raven:$(RAVEN_VERSION)
 
 # self hosted git doesnt support version munging
-# https://git.wownero.com/wownero/wownero/releases
-WOWNERO_URL := https://git.wownero.com/attachments/280753b0-3af0-4a78-a248-8b925e8f4593
-WOWNERO_HASH := a5b2aa0cffa4c7bf82d9d6072aca0bdeb501bdbde33db1d04edb2c4089878e82
-WOWNERO_VERSION := 0.11.1.0
+# https://codeberg.org/wownero/wownero/releases
+WOWNERO_URL := https://codeberg.org/wownero/wownero/releases/download/v0.11.3.0/wownero-x86_64-linux-gnu-v0.11.3.0.tar.bz2
+WOWNERO_HASH := dddb23ca97575d5538a3a3b6a23e49706db15657e124c2300ea7972cb44a0387
+WOWNERO_VERSION := 0.11.3.0
 WOWNERO_TAG := $(BASE_TAG)_wownero:$(WOWNERO_VERSION)
 
 bitcoin_image:

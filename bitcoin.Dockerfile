@@ -1,5 +1,4 @@
-FROM ubuntu:jammy-20220531
-
+FROM ubuntu:oracular-20241120
 ARG BITCOIN_VERSION
 ARG BITCOIN_HASH
 
