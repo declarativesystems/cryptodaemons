@@ -1,0 +1,26 @@
+name: publish image
+on:
+  workflow_dispatch:
+    inputs:
+      target:
+        description: Target image to build (coin name)
+        required: true
+        type: string
+    secrets:
+      QUAY_IO:
+        required: true
+  workflow_call:
+    inputs:
+      target:
+        description: Target image to build (coin name)
+        required: true
+        type: string
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v4
+      - run: make ${{ inputs.target }}_image
+      - run: podman login --username declarativesystems+github  --password ${{ secrets.QUAY_IO }} quay.io
+      - run: make ${{ inputs.target }}_push
