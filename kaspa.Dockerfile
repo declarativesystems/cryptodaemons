@@ -10,9 +10,9 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/* \
     && mkdir /root/.kaspad /app /app/kaspa-${KASPA_VERSION} \
     && cd /app/kaspa-${KASPA_VERSION} \
-    && curl -L "https://github.com/kaspanet/kaspad/releases/download/v${KASPA_VERSION}/kaspad-v${KASPA_VERSION}-linux.zip" -O \
-    && unzip "kaspad-v${KASPA_VERSION}-linux.zip" \
-    && rm "kaspad-v${KASPA_VERSION}-linux.zip" \
+    && curl -L "https://github.com/kaspanet/rusty-kaspa/releases/download/v${KASPA_VERSION}/rusty-kaspa-v${KASPA_VERSION}-linux-amd64.zip" -O \
+    && unzip "rusty-kaspa-v${KASPA_VERSION}-linux-amd64.zip" \
+    && rm "rusty-kaspa-v${KASPA_VERSION}-linux-amd64.zip" \
     && cd .. \
     && ln -s "./kaspa-${KASPA_VERSION}" kaspa
 

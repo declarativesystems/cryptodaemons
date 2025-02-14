@@ -15,8 +15,8 @@ BZMINER_TAG := $(BASE_TAG)_bzminer:$(BZMINER_VERSION)
 DOGECOIN_VERSION := 1.14.9
 DOGECOIN_TAG := $(BASE_TAG)_dogecoin:$(DOGECOIN_VERSION)
 
-# https://github.com/kaspanet/kaspad/releases
-KASPA_VERSION := 0.12.15
+# https://github.com/kaspanet/rusty-kaspa/releases
+KASPA_VERSION := 0.16.0 
 KASPA_TAG := $(BASE_TAG)_kaspa:$(KASPA_VERSION)
 
 # https://github.com/litecoin-project/litecoin/releases
