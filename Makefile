@@ -6,7 +6,7 @@ BITCOIN_HASH := 07f77afd326639145b9ba9562912b2ad2ccec47b8a305bd075b4f4cb127b7ed7
 BITCOIN_TAG := $(BASE_TAG)_bitcoin:$(BITCOIN_VERSION)
 
 # https://github.com/bzminer/bzminer/releases
-BZMINER_VERSION := 21.1.5
+BZMINER_VERSION := 23.0.2
 BZMINER_TAG := $(BASE_TAG)_bzminer:$(BZMINER_VERSION)
 
 # https://github.com/dogecoin/dogecoin/releases
@@ -16,7 +16,7 @@ DOGECOIN_VERSION := 1.14.9
 DOGECOIN_TAG := $(BASE_TAG)_dogecoin:$(DOGECOIN_VERSION)
 
 # https://github.com/kaspanet/rusty-kaspa/releases
-KASPA_VERSION := 0.16.0 
+KASPA_VERSION := 0.16.1 
 KASPA_TAG := $(BASE_TAG)_kaspa:$(KASPA_VERSION)
 
 # https://github.com/litecoin-project/litecoin/releases
@@ -25,7 +25,7 @@ LITECOIN_HASH := 857fc41091f2bae65c3bf0fd4d388fca915fc93a03f16dd2578ac3cc9289839
 LITECOIN_TAG := $(BASE_TAG)_litecoin:$(LITECOIN_VERSION)
 
 # https://github.com/Lolliedieb/lolMiner-releases/releases
-LOLMINER_VERSION := 1.88
+LOLMINER_VERSION := 1.94a
 LOLMINER_TAG := $(BASE_TAG)_lolminer:$(LOLMINER_VERSION)
 
 # https://github.com/JustAResearcher/Meowcoin/releases
