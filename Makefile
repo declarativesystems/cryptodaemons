@@ -1,8 +1,8 @@
 BASE_TAG := quay.io/declarativesystems/cryptodaemons
 
 # https://github.com/bitcoin/bitcoin/releases
-BITCOIN_VERSION := 28.1
-BITCOIN_HASH := 07f77afd326639145b9ba9562912b2ad2ccec47b8a305bd075b4f4cb127b7ed7
+BITCOIN_VERSION := 29.0
+BITCOIN_HASH := a681e4f6ce524c338a105f214613605bac6c33d58c31dc5135bbc02bc458bb6c
 BITCOIN_TAG := $(BASE_TAG)_bitcoin:$(BITCOIN_VERSION)
 
 # https://github.com/bzminer/bzminer/releases
@@ -16,7 +16,7 @@ DOGECOIN_VERSION := 1.14.9
 DOGECOIN_TAG := $(BASE_TAG)_dogecoin:$(DOGECOIN_VERSION)
 
 # https://github.com/kaspanet/rusty-kaspa/releases
-KASPA_VERSION := 0.16.1 
+KASPA_VERSION := 1.0.0 
 KASPA_TAG := $(BASE_TAG)_kaspa:$(KASPA_VERSION)
 
 # https://github.com/litecoin-project/litecoin/releases
@@ -34,8 +34,8 @@ MEOWCOIN_URL := https://github.com/Meowcoin-Foundation/Meowcoin/releases/downloa
 MEOWCOIN_TAG := $(BASE_TAG)_meowcoin:$(MEOWCOIN_VERSION)
 
 # https://github.com/monero-project/monero/releases
-MONERO_VERSION := 0.18.3.4
-MONERO_HASH := 51ba03928d189c1c11b5379cab17dd9ae8d2230056dc05c872d0f8dba4a87f1d
+MONERO_VERSION := 0.18.4.0
+MONERO_HASH := 16cb74c899922887827845a41d37c7f3121462792a540843f2fcabcc1603993f
 MONERO_TAG := $(BASE_TAG)_monero:$(MONERO_VERSION)
 
 # https://github.com/RavenProject/Ravencoin/releases
