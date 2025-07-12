@@ -16,7 +16,7 @@ DOGECOIN_VERSION := 1.14.9
 DOGECOIN_TAG := $(BASE_TAG)_dogecoin:$(DOGECOIN_VERSION)
 
 # https://github.com/kaspanet/rusty-kaspa/releases
-KASPA_VERSION := 1.0.0 
+KASPA_VERSION := 1.0.1
 KASPA_TAG := $(BASE_TAG)_kaspa:$(KASPA_VERSION)
 
 # https://github.com/litecoin-project/litecoin/releases
