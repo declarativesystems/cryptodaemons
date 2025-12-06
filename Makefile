@@ -1,8 +1,8 @@
 BASE_TAG := quay.io/declarativesystems/cryptodaemons
 
 # https://github.com/bitcoin/bitcoin/releases
-BITCOIN_VERSION := 29.0
-BITCOIN_HASH := a681e4f6ce524c338a105f214613605bac6c33d58c31dc5135bbc02bc458bb6c
+BITCOIN_VERSION := 29.2
+BITCOIN_HASH := 1fd58d0ae94b8a9e21bbaeab7d53395a44976e82bd5492b0a894826c135f9009
 BITCOIN_TAG := $(BASE_TAG)_bitcoin:$(BITCOIN_VERSION)
 
 # https://github.com/bzminer/bzminer/releases
@@ -29,13 +29,13 @@ LOLMINER_VERSION := 1.94a
 LOLMINER_TAG := $(BASE_TAG)_lolminer:$(LOLMINER_VERSION)
 
 # https://github.com/JustAResearcher/Meowcoin/releases
-MEOWCOIN_VERSION := 2.0.5
-MEOWCOIN_URL := https://github.com/Meowcoin-Foundation/Meowcoin/releases/download/Meow-v2.0.5/meowcoin-2.0.5-673684e10-x86_64-linux-gnu.tar.gz
+MEOWCOIN_VERSION := 3.0.6
+MEOWCOIN_URL := https://github.com/Meowcoin-Foundation/Meowcoin/releases/download/Meow-v3.0.6/meowcoin-3.0.6-5e22826-x86_64-linux-gnu.tar.gz
 MEOWCOIN_TAG := $(BASE_TAG)_meowcoin:$(MEOWCOIN_VERSION)
 
 # https://github.com/monero-project/monero/releases
-MONERO_VERSION := 0.18.4.0
-MONERO_HASH := 16cb74c899922887827845a41d37c7f3121462792a540843f2fcabcc1603993f
+MONERO_VERSION := 0.18.4.4
+MONERO_HASH := 7fe45ee9aade429ccdcfcad93b905ba45da5d3b46d2dc8c6d5afc48bd9e7f108
 MONERO_TAG := $(BASE_TAG)_monero:$(MONERO_VERSION)
 
 # https://github.com/RavenProject/Ravencoin/releases

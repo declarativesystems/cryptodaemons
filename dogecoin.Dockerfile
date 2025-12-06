@@ -1,4 +1,4 @@
-FROM ubuntu:oracular-20241120
+FROM debian:trixie-20251117-slim
 
 ARG DOGECOIN_VERSION
 
