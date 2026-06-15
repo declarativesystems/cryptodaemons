@@ -42,6 +42,7 @@ MONERO_TAG := $(BASE_TAG)_monero:$(MONERO_VERSION)
 RAVEN_VERSION := raven-4.7.0-0b91b62a2
 RAVEN_HASH := ff61de956d7e06c126986942c56f7e8d13841b985814747e9960465538cf0e37
 RAVEN_TAG := $(BASE_TAG)_raven:$(RAVEN_VERSION)
+RAVEN_URL := https://github.com/RavenProject/Ravencoin/releases/download/v4.6.2snapshot/raven-4.7.0-0b91b62a2-x86_64-linux-gnu.tar.gz
 
 # self hosted git doesnt support version munging
 # https://codeberg.org/wownero/wownero/releases
