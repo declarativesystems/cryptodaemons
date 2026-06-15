@@ -47,7 +47,7 @@ RAVEN_TAG := $(BASE_TAG)_raven:$(RAVEN_VERSION)
 # https://codeberg.org/wownero/wownero/releases
 WOWNERO_URL := https://codeberg.org/wownero/wownero/releases/download/v0.11.4.0/wownero-x86_64-linux-gnu-v0.11.4.0.tar.bz2
 WOWNERO_HASH := 47ae80080e8298407d62e22cabe07cd710291d123155b3a8adf1f11c8931ac39
-WOWNERO_VERSION := 0.11.3.0
+WOWNERO_VERSION := 0.11.4.0
 WOWNERO_TAG := $(BASE_TAG)_wownero:$(WOWNERO_VERSION)
 
 bitcoin_image:
