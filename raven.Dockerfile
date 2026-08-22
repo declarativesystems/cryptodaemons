@@ -1,6 +1,6 @@
 FROM debian:trixie-20260803-slim
 
-ARG RAVEN_VERSION
+ARG RAVEN_FULL_VERSION
 ARG RAVEN_HASH
 ARG RAVEN_URL
 
@@ -16,7 +16,7 @@ RUN RAVEN_ARCHIVE=$(basename "${RAVEN_URL}") \
     && echo "${RAVEN_HASH} ${RAVEN_ARCHIVE}" | sha256sum --check \
     && tar -zxvf ${RAVEN_ARCHIVE} \
     && rm "${RAVEN_ARCHIVE}" \
-    && ln -s "./raven-${RAVEN_VERSION}" raven
+    && ln -s "./raven-${RAVEN_FULL_VERSION}" raven
 
 WORKDIR /app/raven
 

@@ -138,7 +138,7 @@ monero_push:
 
 raven_image:
 	buildah bud \
-		--build-arg RAVEN_VERSION=$(RAVEN_VERSION) \
+		--build-arg RAVEN_FULL_VERSION=$(RAVEN_FULL_VERSION) \
 		--build-arg RAVEN_HASH=$(RAVEN_HASH) \
 		--build-arg RAVEN_URL=$(RAVEN_URL) \
 		-f raven.Dockerfile \
