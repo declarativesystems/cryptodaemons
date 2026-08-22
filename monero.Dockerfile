@@ -1,4 +1,4 @@
-FROM debian:trixie-20251117-slim
+FROM debian:trixie-20260803-slim
 
 ARG MONERO_VERSION
 ARG MONERO_HASH

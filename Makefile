@@ -1,8 +1,8 @@
 BASE_TAG := quay.io/declarativesystems/cryptodaemons
 
 # https://github.com/bitcoin/bitcoin/releases
-BITCOIN_VERSION := 31.0
-BITCOIN_HASH := d3e4c58a35b1d0a97a457462c94f55501ad167c660c245cb1ffa565641c65074
+BITCOIN_VERSION := 31.1
+BITCOIN_HASH := b80d9c3e04da78fb6f0569685673418cf686fadba9042d926d13fb87ff503f9e
 BITCOIN_TAG := $(BASE_TAG)_bitcoin:$(BITCOIN_VERSION)
 
 # https://github.com/bzminer/bzminer/releases
@@ -16,12 +16,12 @@ DOGECOIN_VERSION := 1.14.9
 DOGECOIN_TAG := $(BASE_TAG)_dogecoin:$(DOGECOIN_VERSION)
 
 # https://github.com/kaspanet/rusty-kaspa/releases
-KASPA_VERSION := 2.0.0
+KASPA_VERSION := 2.0.1
 KASPA_TAG := $(BASE_TAG)_kaspa:$(KASPA_VERSION)
 
 # https://github.com/litecoin-project/litecoin/releases
-LITECOIN_VERSION := 0.21.5.5
-LITECOIN_HASH := 623410d4f2695a68aa71332ae0672fee19276f41c1c63a531f97e24a50edde14
+LITECOIN_VERSION := 0.21.5.6
+LITECOIN_HASH := 3c0a217651a431ef446641669a0b74ce7dbcd9b9ed1a118fc830b8f6779ee83f
 LITECOIN_TAG := $(BASE_TAG)_litecoin:$(LITECOIN_VERSION)
 
 # https://github.com/Lolliedieb/lolMiner-releases/releases
@@ -29,20 +29,21 @@ LOLMINER_VERSION := 1.94a
 LOLMINER_TAG := $(BASE_TAG)_lolminer:$(LOLMINER_VERSION)
 
 # https://github.com/JustAResearcher/Meowcoin/releases
-MEOWCOIN_VERSION := 30.2.3
+MEOWCOIN_VERSION := 30.2.7
 MEOWCOIN_URL := https://github.com/Meowcoin-Foundation/Meowcoin/releases/download/v30.2.3/meowcoin-30.2.3-x86_64-linux-gnu.tar.gz
 MEOWCOIN_TAG := $(BASE_TAG)_meowcoin:$(MEOWCOIN_VERSION)
 
 # https://github.com/monero-project/monero/releases
-MONERO_VERSION := 0.18.5.0
-MONERO_HASH := 166ad93036f95f5abeba24c8670061be022c9238dba2e6a7587611a1d759e294
+MONERO_VERSION := 0.18.5.1
+MONERO_HASH := 22a7dda7b0cb699fdd6b7674c3b4a4465b337cc98a54983523b759e1e7cc9958
 MONERO_TAG := $(BASE_TAG)_monero:$(MONERO_VERSION)
 
 # https://github.com/RavenProject/Ravencoin/releases
-RAVEN_VERSION := 4.7.0-0b91b62a2
-RAVEN_HASH := ff61de956d7e06c126986942c56f7e8d13841b985814747e9960465538cf0e37
-RAVEN_TAG := $(BASE_TAG)_raven:$(RAVEN_VERSION)
-RAVEN_URL := https://github.com/RavenProject/Ravencoin/releases/download/v4.6.2snapshot/raven-4.7.0-0b91b62a2-x86_64-linux-gnu.tar.gz
+RAVEN_VERSION := 4.8.0
+RAVEN_FULL_VERSION := $(RAVEN_VERSION)-225491298
+RAVEN_HASH := cb359b6a5b42e47068cd655231484fcc763d2f79eae5ea318b029c704a4dc020
+RAVEN_TAG := $(BASE_TAG)_raven:$(RAVEN_FULL_VERSION)
+RAVEN_URL := https://github.com/RavenProject/Ravencoin/releases/download/v$(RAVEN_VERSION)/raven-$(RAVEN_FULL_VERSION)-x86_64-linux-gnu.tar.gz
 
 # self hosted git doesnt support version munging
 # https://codeberg.org/wownero/wownero/releases
