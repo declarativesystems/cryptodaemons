@@ -30,7 +30,7 @@ LOLMINER_TAG := $(BASE_TAG)_lolminer:$(LOLMINER_VERSION)
 
 # https://github.com/JustAResearcher/Meowcoin/releases
 MEOWCOIN_VERSION := 30.2.7
-MEOWCOIN_URL := https://github.com/Meowcoin-Foundation/Meowcoin/releases/download/v30.2.3/meowcoin-30.2.3-x86_64-linux-gnu.tar.gz
+MEOWCOIN_URL := https://github.com/Meowcoin-Foundation/Meowcoin/releases/download/v$(MEOWCOIN_VERSION)/meowcoin-$(MEOWCOIN_VERSION)-x86_64-linux-gnu.tar.gz
 MEOWCOIN_TAG := $(BASE_TAG)_meowcoin:$(MEOWCOIN_VERSION)
 
 # https://github.com/monero-project/monero/releases
