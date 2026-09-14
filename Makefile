@@ -20,8 +20,8 @@ KASPA_VERSION := 2.0.1
 KASPA_TAG := $(BASE_TAG)_kaspa:$(KASPA_VERSION)
 
 # https://github.com/litecoin-project/litecoin/releases
-LITECOIN_VERSION := 0.21.5.6
-LITECOIN_HASH := 3c0a217651a431ef446641669a0b74ce7dbcd9b9ed1a118fc830b8f6779ee83f
+LITECOIN_VERSION := 0.21.5.8
+LITECOIN_HASH := 43200c9f9d65ebc126ea5833ca9429e144c4b3273da6bb9f4e89fd7450ab1be9
 LITECOIN_TAG := $(BASE_TAG)_litecoin:$(LITECOIN_VERSION)
 
 # https://github.com/Lolliedieb/lolMiner-releases/releases
@@ -29,7 +29,7 @@ LOLMINER_VERSION := 1.94a
 LOLMINER_TAG := $(BASE_TAG)_lolminer:$(LOLMINER_VERSION)
 
 # https://github.com/JustAResearcher/Meowcoin/releases
-MEOWCOIN_VERSION := 30.2.7
+MEOWCOIN_VERSION := 30.2.8
 MEOWCOIN_URL := https://github.com/Meowcoin-Foundation/Meowcoin/releases/download/v$(MEOWCOIN_VERSION)/meowcoin-$(MEOWCOIN_VERSION)-x86_64-linux-gnu.tar.gz
 MEOWCOIN_TAG := $(BASE_TAG)_meowcoin:$(MEOWCOIN_VERSION)
 
